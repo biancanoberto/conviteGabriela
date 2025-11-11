@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap');
+
+/* reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(180deg, #ffd7f1, #b3e4ff);
+  overflow: hidden;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* telas */
+.tela {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  transition: opacity 1s ease;
+}
+
+.tela.ativa {
+  display: flex;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* conteúdo das telas */
+.conteudo h1 {
+  font-family: "Great Vibes", cursive;
+  font-size: 3rem;
+  color: #471651;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px #fff;
+}
+
+.conteudo h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 2.2rem;
+  color: #471651;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px #fff;
+}
+
+.conteudo p {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* botões */
+button {
+  font-family: "Poppins", sans-serif;
+  background: #471651;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #6b1d7b;
+  transform: scale(1.05);
+}
+
+/* imagens principais */
+.stitch,
+.gabi {
+  width: 70%;
+  max-width: 300px;
+  margin-bottom: 15px;
+}
+
+/* final */
+.final p {
+  margin: 5px 0;
+}
+
+/* confirmação de presença */
+.confirmacao {
+  margin-top: 20px;
+}
+
+.confirmacao label {
+  display: block;
+  font-weight: bold;
+  color: #471651;
+  margin-bottom: 5px;
+}
+
+.confirmacao input {
+  border: 2px solid #471651;
+  border-radius: 10px;
+  padding: 10px;
+  width: 80%;
+  text-align: center;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+/* fundo dinâmico */
+.flores-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.flor,
+.folha {
+  position: absolute;
+  opacity: 0.9;
+  animation: flutuar 6s ease-in-out infinite;
+}
+
+/* animação de flutuar */
+@keyframes flutuar {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(10deg); }
+}
+
+/* responsividade */
+@media (max-width: 768px) {
+  .stitch,
+  .gabi {
+    width: 80%;
+  }
+
+  .conteudo h1 {
+    font-size: 2.3rem;
+  }
+
+  .conteudo h2 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+

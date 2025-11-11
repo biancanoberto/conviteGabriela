@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Convite — Gabriela 5 Anos 🌺</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <audio id="bg-music" src="assets/musica.mp3" preload="auto" loop></audio>
+
+    <div class="container">
+      <!-- fundo dinâmico -->
+      <div class="flores-bg"></div>
+
+      <!-- TELA 1 -->
+      <div class="tela ativa" id="tela1">
+        <div class="conteudo">
+        <img src="assets/stitch%20e%20angel.png" alt="Stitch e Angel" class="stitch" />
+          <h1>aloha!</h1>
+          <p>o stitch e a angel te convidam para uma aventura superdivertida!</p>
+          <button onclick="proximaTela()">quero participar!</button>
+        </div>
+      </div>
+
+      <!-- TELA 2 -->
+      <div class="tela" id="tela2">
+        <div class="conteudo">
+          <img src="assets/gabililo.png" alt="Gabriela" class="gabi" />
+          <h2>gabriela faz 5 anos!</h2>
+          <button onclick="proximaTela()">ver informações da festa</button>
+        </div>
+      </div>
+
+      <!-- TELA 3 -->
+      <div class="tela" id="tela3">
+        <div class="conteudo final">
+          <h2>informações da festa</h2>
+          <p>📅 dia: <strong>23 de novembro de 2025</strong></p>
+          <p>🕔 hora: <strong>17h</strong></p>
+          <p>📍 local: <strong>Shopping Patteo – Game Station</strong></p>
+          <br />
+          <p>
+            venha com muita alegria e prepare-se para brincar e se divertir como
+            se estivesse em ohana!
+          </p>
+          <p>“ohana quer dizer família, e família quer dizer nunca abandonar.” 🌈</p>
+
+          <div class="confirmacao">
+            <label for="nomes">nome dos convidados:</label>
+            <input
+              type="text"
+              id="nomes"
+              placeholder="ex: ana, pedro e joão"
+            />
+            <button onclick="confirmarPresenca()">confirmar presença</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
